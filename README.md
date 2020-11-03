@@ -2,7 +2,7 @@ Le but est de réaliser la version back du kata [TODO MVC](http://todomvc.com/).
 
 Pour l'instant le projet contient le strict nécessaire pour démarrer. **Reportez-vous à la branche 'solution'** pour une implémentation complète.
 
-L'API à implémenter est la suivante (que vous pouvez aussi retrouver [en ligne](https://github.com/tastejs/todomvc-api/blob/master/todos.apib)).
+### L'API à implémenter est la suivante (que vous pouvez aussi retrouver [en ligne](https://github.com/tastejs/todomvc-api/blob/master/todos.apib)).
 
 Il est recommandé de faire des tests unitaires (et pourquoi pas du TDD), et de valider l'implémentation via les tests proposés par [todobackend.com](https://www.todobackend.com/specs/index.html?http://localhost:8080/todos).
 
