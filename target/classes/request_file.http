@@ -1,0 +1,85 @@
+### GET ALL TODOS
+GET http://localhost:8080/todos
+Accept: */*
+Cache-Control: no-cache
+
+
+### NOT FOUND ONE TODO
+GET http://localhost:8080/todos/35
+Accept: application/json
+
+
+### GET ONE TODO
+GET http://localhost:8080/todos/3
+Accept: application/json
+
+
+### CREATE ONE TODO
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+  "title": "New task to achieve",
+  "order": 23
+}
+
+### NOT FOUND TODO TO UPDATE
+PUT http://localhost:8080/todos/35
+Content-Type: application/json
+
+
+### UPDATE ENTIRE TODO
+PUT http://localhost:8080/todos/1
+Content-Type: application/json
+
+{
+  "title": "Task Updated With PUT",
+  "completed": true,
+  "order": 34
+}
+
+
+### NOT FOUND TODO TO UPDATE
+PATCH http://localhost:8080/todos/32
+Content-Type: application/json
+
+### UPDATE TITLE FIELD
+PATCH http://localhost:8080/todos/1
+Content-Type: application/json-patch+json
+
+[
+  {
+    "op": "replace",
+    "path": "/completed",
+    "value": false
+  },
+  {
+    "op": "replace",
+    "path": "/orders",
+    "value": 101
+  }
+]
+
+
+### UPDATE COMPLETED FIELD
+PATCH http://localhost:8080/todos/1
+Content-Type: application/json
+
+{
+  "completed": true
+}
+
+
+### DELETE ONE TODO
+DELETE http://localhost:8080/todos/1
+Accept: application/json
+
+
+### NOT FOUND ONE TODO TO DELETE
+GET http://localhost:8080/todos/35
+Accept: application/json
+
+
+### DELETE ALL TODOS
+DELETE http://localhost:8080/todos
+Accept: application/json
